@@ -1,12 +1,30 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useState } from 'react';
+import Header from '@/components/Header';
+import Hero from '@/components/Hero';
+import ToursSection from '@/components/ToursSection';
+import AboutSection from '@/components/AboutSection';
+import BookingSection from '@/components/BookingSection';
+import Footer from '@/components/Footer';
+import { Tour } from '@/lib/tourData';
 
 const Index = () => {
+  const [selectedTour, setSelectedTour] = useState<Tour | undefined>();
+
+  const handleBooking = (tour: Tour) => {
+    setSelectedTour(tour);
+    document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen">
+      <Header />
+      <main>
+        <Hero />
+        <ToursSection onBooking={handleBooking} />
+        <AboutSection />
+        <BookingSection selectedTour={selectedTour} />
+      </main>
+      <Footer />
     </div>
   );
 };
