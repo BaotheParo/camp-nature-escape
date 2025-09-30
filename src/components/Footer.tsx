@@ -1,4 +1,5 @@
 import { Facebook, Instagram, Mail, Phone, MapPin } from 'lucide-react';
+import campLogo from '@/assets/camp-logo.png';
 
 const Footer = () => {
   return (
@@ -7,15 +8,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 bg-primary-foreground/10 rounded-lg flex items-center justify-center">
-                <span className="font-bold text-xl">C</span>
-              </div>
-              <div>
-                <h3 className="font-bold text-xl">CAMP</h3>
-                <p className="text-xs italic opacity-80">A gentle stamp</p>
-              </div>
-            </div>
+            <img 
+              src={campLogo} 
+              alt="CAMP Travel Logo" 
+              className="h-16 w-auto mb-4 brightness-0 invert"
+            />
             <p className="text-sm opacity-80 leading-relaxed">
               Kết nối con người với thiên nhiên qua những trải nghiệm camping độc đáo và 
               khó quên tại Việt Nam.

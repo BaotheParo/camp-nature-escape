@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
+import campLogo from '@/assets/camp-logo.png';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -29,14 +30,12 @@ const Header = () => {
       }`}
     >
       <nav className="container mx-auto px-4 h-20 flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <div className="w-10 h-10 gradient-nature rounded-lg flex items-center justify-center">
-            <span className="text-primary-foreground font-bold text-xl">C</span>
-          </div>
-          <div>
-            <h1 className="font-bold text-xl text-primary">CAMP</h1>
-            <p className="text-xs text-muted-foreground italic">A gentle stamp</p>
-          </div>
+        <div className="flex items-center gap-3">
+          <img 
+            src={campLogo} 
+            alt="CAMP Travel Logo" 
+            className="h-12 w-auto"
+          />
         </div>
 
         {/* Desktop Menu */}
