@@ -3,6 +3,10 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { MapPin, Clock, Users, TrendingUp } from 'lucide-react';
 import { Tour, formatPrice, getDifficultyLabel } from '@/lib/tourData';
+import dalatImage from '@/assets/camping-dalat.jpg';
+import puluongImage from '@/assets/camping-puluong.jpg';
+import sapaImage from '@/assets/camping-sapa.jpg';
+import mocchauImage from '@/assets/camping-mocchau.jpg';
 
 interface TourCardProps {
   tour: Tour;
@@ -16,10 +20,24 @@ const TourCard = ({ tour, onBooking }: TourCardProps) => {
     challenging: 'bg-destructive/10 text-destructive border-destructive/20',
   };
 
+  const imageMap: Record<string, string> = {
+    '/camping-dalat.jpg': dalatImage,
+    '/camping-puluong.jpg': puluongImage,
+    '/camping-sapa.jpg': sapaImage,
+    '/camping-mocchau.jpg': mocchauImage,
+  };
+
+  const tourImage = imageMap[tour.image] || dalatImage;
+
   return (
     <Card className="group overflow-hidden shadow-card hover:shadow-hover transition-smooth border-border/50 bg-card">
-      {/* Image with fallback gradient */}
-      <div className="relative h-56 overflow-hidden bg-gradient-nature">
+      {/* Image with overlay */}
+      <div className="relative h-56 overflow-hidden">
+        <img
+          src={tourImage}
+          alt={tour.title}
+          className="w-full h-full object-cover"
+        />
         <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary-dark/20 group-hover:opacity-0 transition-smooth" />
         <div className="absolute top-4 right-4 z-10">
           <Badge className={difficultyColors[tour.difficulty]}>
