@@ -55,7 +55,7 @@ const BookingSection = ({ selectedTour }: BookingSectionProps) => {
               <Calendar className="text-primary" size={32} />
             </div>
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Đặt <span className="gradient-nature bg-clip-text text-transparent">Tour</span>
+              Đặt <span className="text-primary">Tour</span>
             </h2>
             <p className="text-lg text-muted-foreground">
               Điền thông tin để chúng tôi tư vấn và hỗ trợ bạn tốt nhất

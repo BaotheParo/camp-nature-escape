@@ -22,7 +22,7 @@ const ToursSection = ({ onBooking }: ToursSectionProps) => {
             <Compass className="text-primary" size={32} />
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Tour <span className="gradient-nature bg-clip-text text-transparent">Camping</span>
+            Tour <span className="text-primary">Camping</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Khám phá những địa điểm camping tuyệt đẹp trên khắp Việt Nam với 

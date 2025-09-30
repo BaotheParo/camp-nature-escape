@@ -44,7 +44,7 @@ const AboutSection = () => {
         <div className="max-w-6xl mx-auto mb-20">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Về <span className="gradient-nature bg-clip-text text-transparent">CAMP</span>
+              Về <span className="text-primary">CAMP</span>
             </h2>
             <p className="text-lg text-muted-foreground italic">A gentle stamp</p>
           </div>

@@ -29,7 +29,7 @@ const Hero = () => {
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
             Kết Nối Với
             <br />
-            <span className="gradient-nature bg-clip-text text-transparent">Thiên Nhiên</span>
+            <span className="text-primary">Thiên Nhiên</span>
           </h1>
           
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
